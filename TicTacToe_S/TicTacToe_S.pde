@@ -5,9 +5,9 @@ Server server;
 
 Cell[][] grid = new Cell[3][3];
 
-int posAX = 100;
-int posAY = 200;
-int cellSize = 200;
+int posAX = 75;
+int posAY = 175;
+int cellSize = 150;
 int posBX = posAX + cellSize * 3;
 int posBY = posAY + cellSize * 3;
 
@@ -15,7 +15,7 @@ boolean turn = true;
 
 void setup()
 {
-  size(800, 1000);
+  size(600, 800);
   rectMode(CENTER);
   textAlign(CENTER, CENTER);
   strokeWeight(8);
@@ -93,12 +93,12 @@ void drawCells()
 
 void textUI()
 {
-  textSize(100);
+  textSize(80);
   fill(255);
   
   text("tic tac toe", width / 2, 50 + cellSize / 32);
   
-  textSize(75);
+  textSize(60);
   
   text(turn ? "your turn" : "waiting...", width / 2, (height - 50) - cellSize / 5);
 }
